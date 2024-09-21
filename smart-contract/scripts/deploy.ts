@@ -13,19 +13,9 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-  const NATIVE_TOKEN_ADDRESS = "0x0000000000000000000000000000000000000000";
-  // Get the addresses for NIBS and USDC from environment variables
-  const NIBS_ADDRESS = "0x7c6aa54Eaeea04Cf8950b1451faF0B21CB6037c2";
-  const USDC_ADDRESS = "0x77721D19BDfc67fe8cc46ddaa3cc4C94e6826E3C";
-  const STAKED_EDU_ADDRESS = '0xfeEd714CCA799FA57e6aE25f8FE009Dd4fA854e3';
-
-  const Owner = "0x1B4AcaBA13f8B3B858c0796A7d62FC35A5ED3BA5"
-  const NATIVE_TOKEN_STAKING ="0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE";
-  const EDU_TOKEN ="0x0000000000000000000000000000000000000000"
-
   // We get the contract to deploy
-  const funder = await ethers.getContractFactory("StakingProtocol");
-  const greeter = await funder.deploy(EDU_TOKEN,  NIBS_ADDRESS, STAKED_EDU_ADDRESS)
+  const funder = await ethers.getContractFactory("PlayNetwork");
+  const greeter = await funder.deploy()
 
   // "0x0000000000000000000000000000000000000000" "0x7c6aa54Eaeea04Cf8950b1451faF0B21CB6037c2" "0xfeEd714CCA799FA57e6aE25f8FE009Dd4fA854e3"
   // "0x0000000000000000000000000000000000000000" "0x7c6aa54Eaeea04Cf8950b1451faF0B21CB6037c2" "0x77721D19BDfc67fe8cc46ddaa3cc4C94e6826E3C"
